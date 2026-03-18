@@ -14,7 +14,7 @@ export default function DevicesLog() {
    useEffect(() => {
       const getTransactions = async () => {
          try {
-            const response = await axios.post(ApiDevices);
+            const response = await axios.get(ApiDevices);
             const devicesLog = Object.values(response.data);
             setdevicesLog(devicesLog);
          } catch (error) {

@@ -14,10 +14,7 @@ export const Grid = () => {
    useEffect(() => {
       const getTransactions = async () => {
          try {
-            const response = await axios.post(ApiTransactions, {
-               username: "user",
-               password: "password",
-            });
+            const response = await axios.get(ApiTransactions);
             const transactionList = Object.values(response.data.data);
             setTransactions(transactionList);
          } catch (error) {
@@ -32,7 +29,7 @@ export const Grid = () => {
    useEffect(() => {
       const getTransactions = async () => {
          try {
-            const response = await axios.post(ApiDevices);
+            const response = await axios.get(ApiDevices);
             const devicesLog = Object.values(response.data);
             setdevicesLog(devicesLog);
          } catch (error) {
