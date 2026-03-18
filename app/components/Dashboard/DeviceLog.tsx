@@ -34,11 +34,6 @@ const Card = ({ deviceName, deviceType, status }: { deviceName: string; deviceTy
             <div className="rounded-lg bg-stone-100 p-2 text-stone-600 group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
                <FiCpu size={20} />
             </div>
-
-            <div className={`flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${isOnline ? "bg-emerald-50 text-emerald-700" : "bg-stone-100 text-stone-500"}`}>
-               <span className={`h-1.5 w-1.5 rounded-full ${isOnline ? "bg-emerald-500 animate-pulse" : "bg-stone-400"}`} />
-               online
-            </div>
          </div>
 
          <div>
@@ -48,7 +43,7 @@ const Card = ({ deviceName, deviceType, status }: { deviceName: string; deviceTy
 
          <div className="mt-6 flex items-center justify-between border-t border-stone-50 pt-4 text-xs text-stone-400">
             <div className="flex items-center gap-1">
-               Latest status:
+               Log terbaru:
                <span>{status}</span>
             </div>
             <FiCircle size={10} className="fill-current opacity-20" />
