@@ -8,10 +8,10 @@ export const StatCards: React.FC<StatCardsProps> = ({ transactions, loading }) =
    const totalTransactions = transactions.length.toString();
    const successTransaction = transactions.filter((tx) => tx.detail.transaction_status === "settlement").length.toString();
    return (
-      <>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
          <Card title="Total Transaksi di 20xx" value={`${totalTransactions} transaksi`} period="Dari Januari 20xx - Desember 20xx" />
          <Card title="Total Produk Terjual" value={`${successTransaction} Produk`} period="Dari Januari 20xx - Desember 20xx" />
-      </>
+      </div>
    );
 };
 
